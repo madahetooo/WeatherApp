@@ -4,7 +4,9 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.weather.usecases.numberIncrementer
 
-private const val DEFAULT_VALUE = 0
+ const val DEFAULT_VALUE = 0
+
+
 
 class RandomizerViewModel : ViewModel() {
 
@@ -21,9 +23,4 @@ class RandomizerViewModel : ViewModel() {
 
     }
 
-
-
-    override fun onCleared() {
-        super.onCleared()
-    }
 }
