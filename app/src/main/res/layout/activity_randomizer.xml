@@ -11,8 +11,16 @@
             android:layout_height="wrap_content"
             tools:text="Zero"
             android:textSize="32sp"
-    android:layout_centerHorizontal="true"
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:id="@+id/random_number_textview"
-    />
+            android:id="@+id/random_number_textview"/>
+
+
+    <Button
+            android:id="@+id/increment_button"
+            android:text="@string/increment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/random_number_textview"
+            android:layout_centerHorizontal="true"/>
 </RelativeLayout>

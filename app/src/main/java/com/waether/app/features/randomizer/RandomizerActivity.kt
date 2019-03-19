@@ -15,5 +15,11 @@ class  RandomizerActivity: FragmentActivity(){
 
         viewModel.numberLiveData.observe(this,
             Observer { random_number_textview.text=it.toString()  })
+
+        increment_button.setOnClickListener {
+            viewModel.incrementNumber()
+
+
+        }
     }
 }
