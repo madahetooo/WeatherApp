@@ -8,7 +8,11 @@ import com.weather.entities.City
 interface  CitiesDao{
 
 
-    @Query("select * from City where City.name like:name")
+
+    @Query("select * from city")
+     fun  queryAll() :List<City>
+
+    @Query("select * from City where City.name like '%' ||:name || '%'")
 
     fun queryCitiesByName(name:String) :List<City>
 

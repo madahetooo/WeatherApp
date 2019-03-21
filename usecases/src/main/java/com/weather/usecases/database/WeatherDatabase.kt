@@ -5,11 +5,19 @@ import android.arch.persistence.room.RoomDatabase
 import android.arch.persistence.room.TypeConverters
 import com.weather.entities.City
 import com.weather.entities.FavoriteCityId
+import com.weather.usecases.applicationLiveData
+import com.weather.usecases.getApplication
 
 
-@Database(entities = [City::class,FavoriteCityId::class],version = 1,exportSchema = true)
+val WeatherDatabase : weatherDatabase by lazy {
 
-@TypeConverters(coordinatesTypeConverter::class)
+    initializeDatabase(applicationLiveData.getApplication())
+}
+@Database(entities = [City::class,FavoriteCityId::class],
+    version = 1,
+    exportSchema = true)
+
+@TypeConverters(CoordinatesTypeConverter::class)
 abstract class weatherDatabase: RoomDatabase(){
 
     abstract val citiesao :CitiesDao
