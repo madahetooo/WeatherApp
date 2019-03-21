@@ -18,7 +18,7 @@ interface  CitiesDao{
 
 
     @Query("select*from City where City.id in(:ids)")
-    fun queryCitiesByIds(ids:List<Int>):List<City>
+    fun queryCitiesByIds(ids:List<Long>):List<City>
 
 
 }

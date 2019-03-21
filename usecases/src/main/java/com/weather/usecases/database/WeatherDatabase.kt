@@ -9,7 +9,7 @@ import com.weather.usecases.applicationLiveData
 import com.weather.usecases.getApplication
 
 
-val WeatherDatabase : weatherDatabase by lazy {
+val WeatherDatabase by lazy {
 
     initializeDatabase(applicationLiveData.getApplication())
 }
